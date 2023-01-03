@@ -1,26 +1,26 @@
 {
-	"name": "auv-components",
-	"version": "0.0.18",
+	"name": "auv-ui",
+	"version": "0.0.14",
 	"type": "module",
 	"files": [
 		"lib"
 	],
-	"main": "./lib/auv-components.umd.cjs",
-	"module": "./lib/auv-components.js",
+	"main": "./dist/auv-ui.umd.js",
+	"module": "./dist/auv-ui.es.js",
 	"exports": {
-		"./lib/style.css": "./lib/style.css",
 		".": {
-			"import": "./lib/auv-components.js",
-			"require": "./lib/auv-components.umd.cjs"
+			"import": "./dist/auv-ui.es.js",
+			"require": "./dist/auv-ui.umd.js"
 		}
 	},
 	"scripts": {
-		"dev": "vite",
+		"dev": "vite --port 3000",
 		"draw": "node ./drawComponents.js",
 		"build": "node ./updateVersion.js && vite build && npm publish",
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"vite-plugin-md": "^0.21.5",
 		"vue": "^3.2.45"
 	},
 	"devDependencies": {

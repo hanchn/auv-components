@@ -1,7 +1,7 @@
 import { readdir, writeFile } from 'node:fs/promises';
 
 const config = {
-  entry: './src/components',
+  entry: './packages',
   components: [],
   importList: ``,
   exportList: `\nexport {`
@@ -15,7 +15,7 @@ tree.map((item, index) => {
   if (splitList.length === 1) { 
     let val = splitList[0]
     let auvVal = 'auv' + val
-    config.importList += `\nimport ${auvVal} from "./components/${val}/index.vue"`
+    config.importList += `\nimport ${auvVal} from "./${val}/index.vue"`
     config.exportList += `
   ${tree.length - 2 <= index ? auvVal + '\n}\n' : auvVal + ','}`
   }
@@ -40,4 +40,4 @@ export function install(Vue) {
 template = config.importList + template + config.exportList + `\nexport default { install }\n`
 
 
-writeFile('./src/main.js', template)
+writeFile('./packages/index.js', template)
