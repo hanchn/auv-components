@@ -1,7 +1,19 @@
 {
 	"name": "auv-components",
-	"version": "0.0.10",
+	"version": "0.0.18",
 	"type": "module",
+	"files": [
+		"lib"
+	],
+	"main": "./lib/auv-components.umd.cjs",
+	"module": "./lib/auv-components.js",
+	"exports": {
+		"./lib/style.css": "./lib/style.css",
+		".": {
+			"import": "./lib/auv-components.js",
+			"require": "./lib/auv-components.umd.cjs"
+		}
+	},
 	"scripts": {
 		"dev": "vite",
 		"draw": "node ./drawComponents.js",
