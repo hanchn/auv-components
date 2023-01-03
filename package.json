@@ -1,0 +1,19 @@
+{
+	"name": "auv-components",
+	"version": "0.0.2",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"draw": "node ./drawComponents.js",
+		"build": "node ./updateVersion.js && vite build",
+		"publish": "npm publish --access public",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"vue": "^3.2.45"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^4.0.0",
+		"vite": "^4.0.0"
+	}
+}
