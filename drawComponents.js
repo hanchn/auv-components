@@ -4,7 +4,8 @@ const config = {
   entry: './packages',
   components: [],
   importList: ``,
-  exportList: `\nexport {`
+  exportList: `\nexport {`,
+  list: ``
 }
 
 const { entry } = config
@@ -15,6 +16,8 @@ tree.map((item, index) => {
   if (splitList.length === 1) { 
     let val = splitList[0]
     let auvVal = 'auv' + val
+    config.list += `
+    ${auvVal + (tree.length - 2 <= index ? `` : `,\n`)}`
     config.importList += `\nimport ${auvVal} from "./${val}/index.vue"`
     config.exportList += `
   ${tree.length - 2 <= index ? auvVal + '\n}\n' : auvVal + ','}`
@@ -27,7 +30,8 @@ function isPlugin(item){
 }
 
 export function install(Vue) {
-  const components = [Button, Layout]
+  const components = [${ config.list }
+  ]
   components.forEach(item => {
     if (isPlugin(item)) {
       Vue.use(item)

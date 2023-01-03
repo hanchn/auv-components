@@ -6,7 +6,9 @@ function isPlugin(item){
 }
 
 export function install(Vue) {
-  const components = [Button, Layout]
+  const components = [
+    auvButton
+  ]
   components.forEach(item => {
     if (isPlugin(item)) {
       Vue.use(item)
