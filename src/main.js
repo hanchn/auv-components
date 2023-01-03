@@ -1,5 +1,5 @@
 
-import Button from "./components/Button/index.vue"
+import auvButton from "./components/auvButton/index.vue"
 
 function isPlugin(item){
   return item.install
@@ -17,7 +17,7 @@ export function install(Vue) {
 }
 
 export {
-  Button
+  auvButton
 }
 
 export default { install }

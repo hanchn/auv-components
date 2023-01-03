@@ -13,7 +13,7 @@ const tree = await readdir(entry)
 tree.map((item, index) => { 
   let splitList = item.split('.')
   if (splitList.length === 1) { 
-    let val = splitList[0]
+    let val = 'auv' + splitList[0]
     config.importList += `\nimport ${val} from "./components/${val}/index.vue"`
     config.exportList += `
   ${tree.length - 2 <= index ? val + '\n}\n' : val + ','}`
