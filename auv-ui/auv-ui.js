@@ -1,42 +1,42 @@
-import { reactive as c, openBlock as a, createElementBlock as r, normalizeStyle as l } from "vue";
-const u = (n, e) => {
+import { reactive as a, toRefs as c, openBlock as r, createElementBlock as l, normalizeStyle as u } from "vue";
+const f = (n, e) => {
   const t = n.__vccOpts || n;
   for (const [o, s] of e)
     t[o] = s;
   return t;
-}, f = {
+}, p = {
   name: "auv-button",
   props: {
     style: Object
   },
   setup: (n, e) => {
-    const t = c({});
+    const t = a({});
     return {
-      ...toRefs(n),
+      ...c(n),
       context: e,
-      ...toRefs(t)
+      ...c(t)
     };
   }
 };
-function p(n, e, t, o, s, d) {
-  return a(), r("button", {
-    style: l(t.style)
+function i(n, e, t, o, s, y) {
+  return r(), l("button", {
+    style: u(t.style)
   }, " aaaaa ", 4);
 }
-const i = /* @__PURE__ */ u(f, [["render", p]]);
-function _(n) {
+const _ = /* @__PURE__ */ f(p, [["render", i]]);
+function m(n) {
   return n.install;
 }
-function m(n) {
+function d(n) {
   [
-    i
+    _
   ].forEach((t) => {
-    _(t) ? n.use(t) : t.name && n.component(t.name, t);
+    m(t) ? n.use(t) : t.name && n.component(t.name, t);
   });
 }
-const v = { install: m };
+const x = { install: d };
 export {
-  i as Button,
-  v as default,
-  m as install
+  _ as Button,
+  x as default,
+  d as install
 };
