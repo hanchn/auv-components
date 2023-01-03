@@ -1,11 +1,12 @@
 <template>
   <button :style="style">
-    <slot/>
+    aaaaa
   </button>
 </template>
 <script>
-import { reactive } from 'vue'
+import { reactive, toRefs } from 'vue'
 export default {
+  name: "auv-button",
   props: {
     style: Object
   },

@@ -15,12 +15,11 @@ tree.map((item, index) => {
   let splitList = item.split('.')
   if (splitList.length === 1) { 
     let val = splitList[0]
-    let auvVal = 'auv' + val
     config.list += `
-    ${auvVal + (tree.length - 2 <= index ? `` : `,\n`)}`
-    config.importList += `\nimport ${auvVal} from "./${val}/index.vue"`
+    ${val + (tree.length - 2 <= index ? `` : `,\n`)}`
+    config.importList += `\nimport ${val} from "./${val}/index.vue"`
     config.exportList += `
-  ${tree.length - 2 <= index ? auvVal + '\n}\n' : auvVal + ','}`
+  ${tree.length - 2 <= index ? val + '\n}\n' : val + ','}`
   }
 })
 

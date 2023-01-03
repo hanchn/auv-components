@@ -1,10 +1,11 @@
-import { reactive as c, openBlock as r, createElementBlock as a, normalizeStyle as l, renderSlot as f } from "vue";
+import { reactive as c, openBlock as a, createElementBlock as r, normalizeStyle as l } from "vue";
 const u = (n, e) => {
   const t = n.__vccOpts || n;
   for (const [o, s] of e)
     t[o] = s;
   return t;
-}, p = {
+}, f = {
+  name: "auv-button",
   props: {
     style: Object
   },
@@ -17,27 +18,25 @@ const u = (n, e) => {
     };
   }
 };
-function i(n, e, t, o, s, y) {
-  return r(), a("button", {
+function p(n, e, t, o, s, d) {
+  return a(), r("button", {
     style: l(t.style)
-  }, [
-    f(n.$slots, "default")
-  ], 4);
+  }, " aaaaa ", 4);
 }
-const _ = /* @__PURE__ */ u(p, [["render", i]]);
-function d(n) {
+const i = /* @__PURE__ */ u(f, [["render", p]]);
+function _(n) {
   return n.install;
 }
 function m(n) {
   [
-    _
+    i
   ].forEach((t) => {
-    d(t) ? n.use(t) : t.name && n.component(t.name, t);
+    _(t) ? n.use(t) : t.name && n.component(t.name, t);
   });
 }
-const $ = { install: m };
+const v = { install: m };
 export {
-  _ as auvButton,
-  $ as default,
+  i as Button,
+  v as default,
   m as install
 };

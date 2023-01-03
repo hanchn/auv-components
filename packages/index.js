@@ -1,5 +1,5 @@
 
-import auvButton from "./Button/index.vue"
+import Button from "./Button/index.vue"
 
 function isPlugin(item){
   return item.install
@@ -7,7 +7,7 @@ function isPlugin(item){
 
 export function install(Vue) {
   const components = [
-    auvButton
+    Button
   ]
   components.forEach(item => {
     if (isPlugin(item)) {
@@ -19,7 +19,7 @@ export function install(Vue) {
 }
 
 export {
-  auvButton
+  Button
 }
 
 export default { install }
