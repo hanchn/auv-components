@@ -7,7 +7,7 @@ export default defineConfig({
 	build: {
 		outDir: "auv-ui", //输出文件名称
 		lib: {
-			entry: path.resolve(__dirname, "./packagesi/index.js"), //指定组件编译入口文件
+			entry: path.resolve(__dirname, "./packages/index.js"), //指定组件编译入口文件
 			name: "auv-ui",
 			fileName: "auv-ui",
 		}, //库编译模式配置
