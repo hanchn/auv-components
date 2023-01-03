@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import path from 'path'
 import Vue from "@vitejs/plugin-vue";
 import Markdown from "vite-plugin-md";
 import { resolve } from "path";
@@ -20,10 +21,12 @@ export default defineConfig({
         },
       },
     },
-    lib: {
-      entry: "./packages/index.js",
-      name: "auv-ui",
-    },
+    outDir: "auv-ui", //输出文件名称
+		lib: {
+			entry: path.resolve(__dirname, "./packages/index.js"), //指定组件编译入口文件
+			name: "auv-ui",
+			fileName: "auv-ui",
+		},
   },
   resolve: {
     alias: {
