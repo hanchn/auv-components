@@ -1,12 +1,11 @@
 {
 	"name": "auv-components",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"draw": "node ./drawComponents.js",
-		"build": "node ./updateVersion.js && vite build",
-		"publish": "npm publish --access public",
+		"build": "node ./updateVersion.js && vite build && npm publish",
 		"preview": "vite preview"
 	},
 	"dependencies": {

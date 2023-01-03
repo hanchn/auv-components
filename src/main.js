@@ -1,5 +1,5 @@
 
-import auvButton from "./components/auvButton/index.vue"
+import auvButton from "./components/Button/index.vue"
 
 function isPlugin(item){
   return item.install
