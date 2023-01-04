@@ -1,7 +1,7 @@
 import { readdir, writeFile } from 'node:fs/promises';
 
 const config = {
-  entry: './components',
+  entry: './packages',
   output: `./packages/index.js`,
   components: [],
   importList: ``,
