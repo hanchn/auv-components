@@ -2,7 +2,7 @@
 	"name": "auv-ui",
 	"version": "0.0.36",
 	"type": "module",
-	"main": "components/auv-ui.js",
+	"main": "auv-ui/auv-ui.js",
 	"scripts": {
 		"dev": "vite --port 3000",
 		"draw": "node ./drawComponents.js",
@@ -10,7 +10,7 @@
 		"preview": "vite preview"
 	},
 	"files": [
-		"components",
+		"auv-ui",
 		"README.md",
 		"package.json"
 	],

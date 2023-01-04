@@ -4,11 +4,11 @@ import path from "path";
 export default defineConfig({
 	plugins: [vue()],
 	build: {
-		outDir: "components", //输出文件名称
+		outDir: "auv-ui", //输出文件名称
 		lib: {
-			entry: path.resolve(__dirname, "./packages/index.js"), //指定组件编译入口文件
-			name: "components",
-			fileName: "components",
+			entry: path.resolve(__dirname, "./components/index.js"), //指定组件编译入口文件
+			name: "auv-ui",
+			fileName: "auv-ui",
 		}, //库编译模式配置
 		rollupOptions: {
 			// 确保外部化处理那些你不想打包进库的依赖
