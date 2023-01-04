@@ -1,12 +1,12 @@
 <template>
-  <button :style="style">
+  <div :style="style">
     <slot></slot>
-  </button>
+  </div>
 </template>
 <script>
 import { reactive, toRefs } from 'vue'
 export default {
-  name: "auv-button",
+  name: "auv-typography",
   props: {
     style: Object
   },
