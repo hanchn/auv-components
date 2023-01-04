@@ -7,7 +7,7 @@
  * } 
  */
 
-export const initState = (state, props) => { 
+export const initState = (state, props) => {
   for (let [key, item] of Object.entries(props)) {
     if (item) { 
       switch (key) { 
