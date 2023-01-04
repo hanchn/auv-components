@@ -17,7 +17,9 @@
 		"auv-ui",
 		"AUV",
 		"AUVUI",
-		"vue3-auv-ui"
+		"vue3-auv-ui",
+		"vue3",
+		"vue3 components"
 	],
 	"dependencies": {
 		"vite-plugin-md": "^0.21.5",
