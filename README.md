@@ -7,3 +7,9 @@ developed a Vue UI library
 ### Button
 
 - To trigger an operation.
+
+### Typography
+
+- Basic text writing
+
+## Layout
