@@ -25,13 +25,19 @@ button.auv-btn[size='default']{
   font-size: 14px;
 }
 
-button.auv-btn[size='default'][type='default']{
+button.auv-btn[size='small']{
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+button.auv-btn[type='default']{
   color: #000000d9;
   border-color: #d9d9d9;
   background: #fff;
 }
 
-button.auv-btn[size='default'][type='default']:hover{
+button.auv-btn[type='default']:hover{
   color: var(--auv-primary-color);
   border-color: var(--auv-primary-color);
 }
