@@ -26,9 +26,15 @@ button.auv-btn[size='default']{
 }
 
 button.auv-btn[size='small']{
-  padding: 10px 20px;
+  padding: 4px 10px;
   margin: 0 10px;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+button.auv-btn[size='large']{
+  padding: 14px 24px;
+  margin: 0 10px;
+  font-size: 16px;
 }
 
 button.auv-btn[type='default']{
