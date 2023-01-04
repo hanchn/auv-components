@@ -1,7 +1,7 @@
 import { readdir, writeFile } from 'node:fs/promises';
 
 const config = {
-  entry: './packages',
+  entry: './components',
   components: [],
   importList: ``,
   exportList: `\nexport {`,
@@ -43,4 +43,4 @@ export function install(Vue) {
 template = config.importList + template + config.exportList + `\nexport default { install }\n`
 
 
-writeFile('./packages/index.js', template)
+writeFile('./components/index.js', template)

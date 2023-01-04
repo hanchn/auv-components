@@ -1,6 +1,6 @@
 <template>
   <button :style="style">
-    aaaaa
+    <slot></slot>
   </button>
 </template>
 <script>
