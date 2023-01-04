@@ -1,0 +1,39 @@
+@import '../public.css';
+
+button.auv-btn{
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+  box-shadow: 0 2px #00000004;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+button.auv-btn.default{
+  min-width: 68px;
+  line-height: 36px;
+  height: 36px;
+  font-size: 14px;
+  color: #000000d9;
+  border-color: #d9d9d9;
+  background: #fff;
+}
+
+button.auv-btn.default:hover{
+  color: ;
+}
+
+button[type="primary"]{
+
+
+}
